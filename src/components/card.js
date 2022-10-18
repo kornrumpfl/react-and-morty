@@ -1,11 +1,14 @@
+import styled from "styled-components";
 export default function Card() {
   return (
-    <div>
+    <CardSt>
       <img
         src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
         alt=""
       />
       <h1>Morty Smith</h1>
-    </div>
+    </CardSt>
   );
 }
+
+const CardSt = styled.div``;
