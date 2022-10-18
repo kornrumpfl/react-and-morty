@@ -1,14 +1,18 @@
 import styled from "styled-components";
-export default function Card() {
+export default function Card({ name, src, status, ...props }) {
   return (
     <CardSt>
-      <img
-        src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
-        alt=""
-      />
-      <h1>Morty Smith</h1>
+      <section>
+        <img src={src} alt="" />
+        <h1>{name}</h1>
+      </section>
     </CardSt>
   );
 }
 
-const CardSt = styled.div``;
+const CardSt = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
